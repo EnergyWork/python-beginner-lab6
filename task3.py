@@ -41,3 +41,4 @@ ax3.pie(values, labels=months)
 # fig params
 fig.subplots_adjust(wspace=0.1, hspace=0.3, left=0.11, bottom=0.06, right=0.96, top=0.9)
 plt.show()
+fig.savefig('temp.png')

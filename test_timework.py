@@ -71,7 +71,7 @@ while number > 1:
     numbers.append(number)
     counter += 1
 '''
-print(timeit.timeit(stmt=code_vanilla, number=1000))
+print(timeit.timeit(stmt=code_vanilla, number=100000))
 
 code_vanilla_without_exception = '''
 counter = 0
@@ -85,4 +85,4 @@ while number > 1:
     numbers.append(number)
     counter += 1
 '''
-print(timeit.timeit(stmt=code_vanilla_without_exception, number=1000))
+print(timeit.timeit(stmt=code_vanilla_without_exception, number=100000))
