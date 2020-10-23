@@ -13,10 +13,14 @@ import numpy as np
 def cardioids(phi):
     return 2 * r * (1 + np.cos(phi))
 
-rads = np.arange(0, 2 * np.pi / 2, 0.01)
+rads = np.arange(0, 3 * np.pi / 2, 0.1) # 3 * np.pi / 2
 r = 2.5
-a, b, k = 1, 1, 1
+arr = []
+for radian in rads:
+    radius = cardioids(radian)
+    arr.append(radius)
+plt.polar(rads, arr, '*', color='g')
 
-plt.polar()
-plt.title('Кардиоида')
+plt.legend(['Кардиоида'], loc='upper left')
+plt.title('Функция')
 plt.show()
